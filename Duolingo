@@ -1,0 +1,391 @@
+// ==UserScript==
+// @name        rac.ban | PUBLIC
+// @namespace   rac.ban exploits
+// @match       https://*.duolingo.com/*
+// @grant       none
+// @version     1.1
+// @author      person1
+// @description 27-6-2022
+// @license MIT
+// @icon  https://218390128490812904832875834759347598374589327572836578625873.imf.repl.co/images/fav.png
+// ==/UserScript==
+const _0xc515f2 = _0x25b0;
+(function (_0x48d977, _0x563e96) {
+    const _0x3664fd = _0x25b0;
+    const _0x42628a = _0x48d977();
+    while (!![]) {
+        try {
+            const _0xc769d9 = -parseInt(_0x3664fd(0x1c6)) / 0x1 + -parseInt(_0x3664fd(0x1b0)) / 0x2 + -parseInt(_0x3664fd(0x1c8)) / 0x3 * (-parseInt(_0x3664fd(0x1c4)) / 0x4) + parseInt(_0x3664fd(0x1a5)) / 0x5 * (parseInt(_0x3664fd(0x1c0)) / 0x6) + parseInt(_0x3664fd(0x1cb)) / 0x7 + parseInt(_0x3664fd(0x1e1)) / 0x8 + -parseInt(_0x3664fd(0x19c)) / 0x9 * (parseInt(_0x3664fd(0x1b5)) / 0xa);
+            if (_0xc769d9 === _0x563e96) {
+                break;
+            } else {
+                _0x42628a['push'](_0x42628a['shift']());
+            }
+        } catch (_0x278ac6) {
+            _0x42628a['push'](_0x42628a['shift']());
+        }
+    }
+}(_0x22c7, 0xcdbed));
+var intervalId;
+function addButtons() {
+    const _0x536f06 = _0x25b0;
+    if (document[_0x536f06(0x19a)](_0x536f06(0x197)) !== null) {
+        return;
+    }
+    let _0x3119c2 = document[_0x536f06(0x19b)]('[data-test=\x22player-next\x22]')[0x0];
+    let _0x301b4f = document[_0x536f06(0x1bb)](_0x536f06(0x1e4))[0x0];
+    if (_0x3119c2 == undefined) {
+        let _0x29153e = document['querySelector']('[data-test=\x22start-button\x22]');
+        if (_0x29153e == undefined) {
+            return;
+        }
+        let _0x535f9b = _0x29153e[_0x536f06(0x1b8)];
+        let _0x391c4e = document[_0x536f06(0x1ea)]('a');
+        _0x391c4e[_0x536f06(0x1d9)] = _0x29153e[_0x536f06(0x1d9)];
+        _0x391c4e['id'] = _0x536f06(0x197);
+        _0x391c4e[_0x536f06(0x1eb)] = _0x536f06(0x1a0);
+        _0x391c4e[_0x536f06(0x1a7)]('href');
+        _0x391c4e[_0x536f06(0x1d5)] = function () {
+            const _0x414adc = _0x536f06;
+            startSolving();
+            setInterval(function () {
+                const _0xa70855 = _0x25b0;
+                let _0x4b3070 = document['querySelector']('[data-test=\x22start-button\x22]');
+                if (_0x4b3070 && _0x4b3070['innerText'][_0xa70855(0x1a3)]('START')) {
+                    _0x4b3070[_0xa70855(0x1d8)]();
+                }
+            }, 0xbb8);
+            _0x29153e[_0x414adc(0x1d8)]();
+        };
+        _0x535f9b[_0x536f06(0x1da)](_0x391c4e);
+    } else {
+        _0x301b4f[_0x536f06(0x1dc)]['display'] = _0x536f06(0x1a4);
+        let _0x16ef53 = document[_0x536f06(0x1ea)](_0x536f06(0x1aa));
+        let _0x585c47 = document[_0x536f06(0x1ea)](_0x536f06(0x1aa));
+        _0x16ef53['id'] = _0x536f06(0x197);
+        if (intervalId) {
+            _0x16ef53['innerHTML'] = _0x536f06(0x1e5);
+        } else {
+            _0x16ef53[_0x536f06(0x1ed)] = _0x536f06(0x1db);
+        }
+        _0x16ef53[_0x536f06(0x1ba)] = ![];
+        _0x585c47[_0x536f06(0x1ed)] = 'SOLVE';
+        const _0x1ffa25 = '\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x20150px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2017px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x204px\x20solid\x20#58a700;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2018px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2013px\x2016px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateZ(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20filter\x20.2s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20700;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20letter-spacing:\x20.8px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#55CD2E;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:#fff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-left:20px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20';
+        _0x16ef53[_0x536f06(0x1dc)][_0x536f06(0x1a2)] = _0x1ffa25;
+        _0x585c47[_0x536f06(0x1dc)]['cssText'] = _0x1ffa25;
+        function _0x2210df(_0x3adc2d) {
+            const _0x1ab6bd = _0x536f06;
+            _0x3adc2d['style'][_0x1ab6bd(0x1a6)] = _0x1ab6bd(0x1a8);
+        }
+        function _0x3e53d5(_0x2e9e33) {
+            const _0x3e8e02 = _0x536f06;
+            _0x2e9e33[_0x3e8e02(0x1dc)]['filter'] = _0x3e8e02(0x1b4);
+        }
+        let _0x25dabe = [
+            _0x16ef53,
+            _0x585c47
+        ];
+        _0x25dabe[_0x536f06(0x1e9)](_0x238839 => {
+            const _0x23d913 = _0x536f06;
+            _0x238839[_0x23d913(0x1bd)]('mousemove', () => {
+                _0x2210df(_0x238839);
+            });
+        });
+        _0x25dabe['forEach'](_0x8eecac => {
+            const _0x27bf5f = _0x536f06;
+            _0x8eecac[_0x27bf5f(0x1bd)](_0x27bf5f(0x1c2), () => {
+                _0x3e53d5(_0x8eecac);
+            });
+        });
+        _0x3119c2[_0x536f06(0x1e6)][_0x536f06(0x1da)](_0x585c47);
+        _0x3119c2[_0x536f06(0x1e6)][_0x536f06(0x1da)](_0x16ef53);
+        _0x16ef53[_0x536f06(0x1bd)]('click', solving);
+        _0x585c47[_0x536f06(0x1bd)](_0x536f06(0x1d8), solve);
+    }
+}
+function _0x25b0(_0x193fb3, _0x3fd5ad) {
+    const _0x22c7af = _0x22c7();
+    _0x25b0 = function (_0x25b072, _0x2f2b52) {
+        _0x25b072 = _0x25b072 - 0x195;
+        let _0x583ffb = _0x22c7af[_0x25b072];
+        return _0x583ffb;
+    };
+    return _0x25b0(_0x193fb3, _0x3fd5ad);
+}
+setInterval(addButtons, 0xbb8);
+function solving() {
+    if (intervalId) {
+        pauseSolving();
+    } else {
+        startSolving();
+    }
+}
+function startSolving() {
+    const _0x5bc193 = _0x25b0;
+    if (intervalId) {
+        return;
+    }
+    document[_0x5bc193(0x19a)](_0x5bc193(0x197))[_0x5bc193(0x1eb)] = 'PAUSE\x20SOLVE';
+    intervalId = setInterval(solve, 0x1f4);
+}
+function pauseSolving() {
+    const _0x419448 = _0x25b0;
+    if (!intervalId) {
+        return;
+    }
+    document[_0x419448(0x19a)](_0x419448(0x197))['innerText'] = 'SOLVE\x20ALL';
+    clearInterval(intervalId);
+    intervalId = undefined;
+}
+function solve() {
+    const _0xb0edcc = _0x25b0;
+    try {
+        window['sol'] = FindReact(document[_0xb0edcc(0x1bb)]('_3FiYg')[0x0])['props'][_0xb0edcc(0x1d3)];
+    } catch {
+        let _0x46e6e3 = document['querySelector']('[data-test=\x22player-next\x22]');
+        if (_0x46e6e3) {
+            _0x46e6e3[_0xb0edcc(0x1d8)]();
+        }
+        return;
+    }
+    if (!window['sol']) {
+        return;
+    }
+    let _0x3464f3 = null;
+    let _0x171ca6 = document[_0xb0edcc(0x19b)]('[data-test=\x22player-next\x22]');
+    let _0x405bfd = document['getElementsByClassName'](_0xb0edcc(0x1df));
+    if (_0x405bfd['length'] === 0x1) {
+        if (_0x405bfd[0x0][_0xb0edcc(0x1ed)][_0xb0edcc(0x1d7)]() === _0xb0edcc(0x1a9)) {
+            _0x405bfd[0x0][_0xb0edcc(0x1d8)]();
+            return;
+        }
+    }
+    if (_0x171ca6[_0xb0edcc(0x1b7)] === 0x1) {
+        _0x3464f3 = _0x171ca6[0x0];
+        if (document[_0xb0edcc(0x19b)]('[data-test=\x22challenge-choice\x22]')[_0xb0edcc(0x1b7)] > 0x0) {
+            if (window[_0xb0edcc(0x1b3)]['correctIndices']) {
+                window['sol'][_0xb0edcc(0x1ad)][_0xb0edcc(0x1e9)](_0x32498d => {
+                    const _0x4848e1 = _0xb0edcc;
+                    document[_0x4848e1(0x19b)](_0x4848e1(0x1bf))[_0x32498d][_0x4848e1(0x1c5)][0x0]['click']();
+                });
+            } else if (window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d2)]) {
+                var _0x21eab4 = '';
+                for (var _0x53866d = 0x0; _0x53866d < window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d2)][_0xb0edcc(0x1b7)]; _0x53866d++) {
+                    if (window['sol'][_0xb0edcc(0x1d4)][0x0][_0xb0edcc(0x1a3)](window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d2)][_0x53866d])) {
+                        Array[_0xb0edcc(0x1ae)](document[_0xb0edcc(0x19b)]('[data-test=\x22challenge-choice\x22]'))[_0xb0edcc(0x1de)](_0x1f7686 => _0x1f7686['querySelector'](_0xb0edcc(0x1c1))[_0xb0edcc(0x1eb)] == window['sol']['articles'][_0x53866d])['click']();
+                        _0x21eab4 = window[_0xb0edcc(0x1b3)]['articles'][_0x53866d];
+                        break;
+                    }
+                }
+                let _0x384a55 = document[_0xb0edcc(0x19b)](_0xb0edcc(0x1b9))[0x0];
+                let _0x32f885 = Object[_0xb0edcc(0x1ab)](window['HTMLInputElement'][_0xb0edcc(0x1b6)], _0xb0edcc(0x1af))[_0xb0edcc(0x1dd)];
+                _0x32f885['call'](_0x384a55, window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d4)] ? window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d4)][0x0][_0xb0edcc(0x19f)](_0x21eab4 + '\x20', '') : window[_0xb0edcc(0x1b3)]['displayTokens'] ? window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1c3)][_0xb0edcc(0x1de)](_0x4f2107 => _0x4f2107[_0xb0edcc(0x1b2)])[_0xb0edcc(0x1d6)] : window[_0xb0edcc(0x1b3)][_0xb0edcc(0x196)]);
+                let _0xaa1de1 = new Event(_0xb0edcc(0x1ee), { 'bubbles': !![] });
+                _0x384a55[_0xb0edcc(0x1e0)](_0xaa1de1);
+            } else {
+                document[_0xb0edcc(0x19b)](_0xb0edcc(0x1bf))[window[_0xb0edcc(0x1b3)][_0xb0edcc(0x199)]][_0xb0edcc(0x1d8)]();
+            }
+            _0x3464f3['click']();
+        }
+        if (document[_0xb0edcc(0x19b)](_0xb0edcc(0x1bc))[_0xb0edcc(0x1b7)] > 0x0) {
+            if (window[_0xb0edcc(0x1b3)]['correctIndices']) {
+                window[_0xb0edcc(0x1b3)]['correctIndices'][_0xb0edcc(0x1e9)](_0x457cfd => {
+                    const _0x16128a = _0xb0edcc;
+                    document[_0x16128a(0x19b)](_0x16128a(0x1bc))[_0x457cfd]['children'][0x0][_0x16128a(0x1d8)]();
+                });
+            } else {
+                document[_0xb0edcc(0x19b)](_0xb0edcc(0x1bc))[window[_0xb0edcc(0x1b3)][_0xb0edcc(0x199)]][_0xb0edcc(0x1d8)]();
+            }
+            _0x3464f3[_0xb0edcc(0x1d8)]();
+        }
+        if (window[_0xb0edcc(0x1b3)]['type'] == _0xb0edcc(0x1e2)) {
+            let _0x299c7c = document[_0xb0edcc(0x19b)](_0xb0edcc(0x1d1));
+            window[_0xb0edcc(0x1b3)]['pairs']['forEach'](_0x14302d => {
+                const _0x1c76c4 = _0xb0edcc;
+                for (let _0x4b58d3 = 0x0; _0x4b58d3 < _0x299c7c['length']; _0x4b58d3++) {
+                    let _0x3b6ffd;
+                    if (_0x299c7c[_0x4b58d3][_0x1c76c4(0x19b)](_0x1c76c4(0x1d0))[_0x1c76c4(0x1b7)] > 0x1) {
+                        _0x3b6ffd = _0x299c7c[_0x4b58d3][_0x1c76c4(0x19d)](_0x1c76c4(0x1d0))[_0x1c76c4(0x1eb)][_0x1c76c4(0x1d7)]()[_0x1c76c4(0x1ca)]();
+                    } else {
+                        _0x3b6ffd = FindSubReact(_0x299c7c[_0x4b58d3])['text'][_0x1c76c4(0x1d7)]()[_0x1c76c4(0x1ca)]();
+                    }
+                    if ((_0x3b6ffd == _0x14302d[_0x1c76c4(0x1ec)][_0x1c76c4(0x1d7)]()[_0x1c76c4(0x1ca)]() || _0x3b6ffd == _0x14302d['translation'][_0x1c76c4(0x1d7)]()[_0x1c76c4(0x1ca)]()) && !_0x299c7c[_0x4b58d3][_0x1c76c4(0x1ba)]) {
+                        _0x299c7c[_0x4b58d3][_0x1c76c4(0x1d8)]();
+                    }
+                }
+            });
+        }
+        if (window[_0xb0edcc(0x1b3)]['type'] == 'listenSpell') {
+            let _0x5470ab = window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1c3)][_0xb0edcc(0x1a6)](_0x2a378a => _0x2a378a['damageStart'] !== undefined);
+            let _0x2e6329 = document[_0xb0edcc(0x19b)]('._2cjP3._2IKiF');
+            let _0x2ec120 = Object[_0xb0edcc(0x1ab)](window[_0xb0edcc(0x1e3)]['prototype'], _0xb0edcc(0x1af))[_0xb0edcc(0x1dd)];
+            var _0x40d1db = [];
+            for (let _0x2d6be3 of _0x5470ab) {
+                for (let _0x36dc81 = _0x2d6be3[_0xb0edcc(0x1cf)]; _0x36dc81 < _0x2d6be3[_0xb0edcc(0x1b1)]; _0x36dc81++) {
+                    _0x40d1db['push'](_0x2d6be3['text'][_0x36dc81]);
+                }
+            }
+            for (var _0x4893db = 0x0; _0x4893db < _0x2e6329[_0xb0edcc(0x1b7)]; _0x4893db++) {
+                _0x2ec120[_0xb0edcc(0x1be)](_0x2e6329[_0x4893db], _0x40d1db[_0x4893db]);
+                let _0x242fd1 = new Event('input', { 'bubbles': !![] });
+                _0x2e6329[_0x4893db][_0xb0edcc(0x1e0)](_0x242fd1);
+            }
+        }
+        if (document[_0xb0edcc(0x19b)]('[data-test=\x22challenge-tap-token\x22]')['length'] > 0x0) {
+            if (window['sol'][_0xb0edcc(0x1ce)]) {
+                let _0x578e0c = document[_0xb0edcc(0x19b)](_0xb0edcc(0x1d1));
+                if (document[_0xb0edcc(0x19b)](_0xb0edcc(0x1d0))[_0xb0edcc(0x1b7)] == document[_0xb0edcc(0x19b)]('[data-test=\x22challenge-tap-token\x22]')[_0xb0edcc(0x1b7)]) {
+                    window['sol'][_0xb0edcc(0x1ce)][_0xb0edcc(0x1e9)](_0x3a1036 => {
+                        const _0x2dd628 = _0xb0edcc;
+                        for (let _0x62393f = 0x0; _0x62393f < _0x578e0c[_0x2dd628(0x1b7)]; _0x62393f++) {
+                            const _0x3b2446 = _0x578e0c[_0x62393f][_0x2dd628(0x19d)]('[data-test=\x22challenge-tap-token-text\x22]')[_0x2dd628(0x1eb)][_0x2dd628(0x1d7)]()[_0x2dd628(0x1ca)]();
+                            if ((_0x3b2446 == _0x3a1036[_0x2dd628(0x1cd)][_0x2dd628(0x1d7)]()[_0x2dd628(0x1ca)]() || _0x3b2446 == _0x3a1036[_0x2dd628(0x1e8)][_0x2dd628(0x1d7)]()[_0x2dd628(0x1ca)]()) && !_0x578e0c[_0x62393f]['disabled']) {
+                                _0x578e0c[_0x62393f][_0x2dd628(0x1d8)]();
+                            }
+                        }
+                    });
+                }
+            } else {
+                let _0x58f46c = {};
+                let _0x3fa603 = document[_0xb0edcc(0x19b)](_0xb0edcc(0x1d1));
+                window['sol']['correctIndices'][_0xb0edcc(0x1e9)](_0x49dbb6 => {
+                    const _0x12bf25 = _0xb0edcc;
+                    let _0x3c92f9 = window[_0x12bf25(0x1b3)]['correctTokens'][_0x49dbb6];
+                    for (let _0x514146 = 0x0; _0x514146 < _0x3fa603[_0x12bf25(0x1b7)]; _0x514146++) {
+                        if (_0x3fa603[_0x514146][_0x12bf25(0x1eb)][_0x12bf25(0x1d7)]()[_0x12bf25(0x1ca)]() == _0x3c92f9['toLowerCase']()[_0x12bf25(0x1ca)]() && !_0x3fa603[_0x514146][_0x12bf25(0x1ba)] && !_0x58f46c[_0x514146]) {
+                            _0x58f46c[_0x514146] = 0x1;
+                            _0x3fa603[_0x514146][_0x12bf25(0x1d8)]();
+                            break;
+                        }
+                    }
+                });
+            }
+            _0x3464f3[_0xb0edcc(0x1d8)]();
+        }
+        if (document[_0xb0edcc(0x19b)](_0xb0edcc(0x1b9))[_0xb0edcc(0x1b7)] > 0x0) {
+            let _0x21bd40 = document[_0xb0edcc(0x19b)]('[data-test=\x22challenge-text-input\x22]')[0x0];
+            let _0x4fc2c5 = Object['getOwnPropertyDescriptor'](window[_0xb0edcc(0x1e3)][_0xb0edcc(0x1b6)], _0xb0edcc(0x1af))['set'];
+            _0x4fc2c5[_0xb0edcc(0x1be)](_0x21bd40, window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d4)] ? window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d4)][0x0] : window['sol']['displayTokens'] ? window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1c3)][_0xb0edcc(0x1de)](_0x52c67a => _0x52c67a[_0xb0edcc(0x1b2)])[_0xb0edcc(0x1d6)] : window[_0xb0edcc(0x1b3)][_0xb0edcc(0x196)]);
+            let _0x3851cc = new Event('input', { 'bubbles': !![] });
+            _0x21bd40['dispatchEvent'](_0x3851cc);
+        }
+        if (document[_0xb0edcc(0x1cc)]('textarea')['length'] > 0x0) {
+            let _0x520e5b = document[_0xb0edcc(0x1cc)](_0xb0edcc(0x19e))[0x0];
+            let _0x4f7234 = Object[_0xb0edcc(0x1ab)](window[_0xb0edcc(0x1ac)][_0xb0edcc(0x1b6)], _0xb0edcc(0x1af))[_0xb0edcc(0x1dd)];
+            _0x4f7234[_0xb0edcc(0x1be)](_0x520e5b, window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d4)] ? window[_0xb0edcc(0x1b3)][_0xb0edcc(0x1d4)][0x0] : window[_0xb0edcc(0x1b3)]['prompt']);
+            let _0x2ff8f1 = new Event(_0xb0edcc(0x1ee), { 'bubbles': !![] });
+            _0x520e5b[_0xb0edcc(0x1e0)](_0x2ff8f1);
+        }
+        _0x3464f3[_0xb0edcc(0x1d8)]();
+    }
+}
+function FindSubReact(_0x388c5b, _0x5c4470 = 0x0) {
+    const _0x282bb0 = _0x25b0;
+    const _0x45d5d9 = Object[_0x282bb0(0x1a1)](_0x388c5b)[_0x282bb0(0x1de)](_0xceb9f3 => _0xceb9f3[_0x282bb0(0x1a3)](_0x282bb0(0x1c9)));
+    return _0x388c5b['parentElement'][_0x45d5d9][_0x282bb0(0x1c5)][_0x282bb0(0x1c7)];
+}
+function _0x22c7() {
+    const _0x2252d4 = [
+        'listenMatch',
+        'HTMLInputElement',
+        '_10vOG',
+        'PAUSE\x20SOLVE',
+        'parentElement',
+        'stateNode',
+        'fromToken',
+        'forEach',
+        'createElement',
+        'innerText',
+        'learningWord',
+        'innerHTML',
+        'input',
+        'findReact',
+        'prompt',
+        'solveAllButton',
+        '_owner',
+        'correctIndex',
+        'getElementById',
+        'querySelectorAll',
+        '243675qMMfwi',
+        'querySelector',
+        'textarea',
+        'replace',
+        'COMPLETE\x20SKILL',
+        'keys',
+        'cssText',
+        'startsWith',
+        'flex',
+        '8885GFesgi',
+        'filter',
+        'removeAttribute',
+        'brightness(1.1)',
+        'practice\x20again',
+        'button',
+        'getOwnPropertyDescriptor',
+        'HTMLTextAreaElement',
+        'correctIndices',
+        'from',
+        'value',
+        '2319778DxmeEA',
+        'damageEnd',
+        'isBlank',
+        'sol',
+        'none',
+        '1010foSKdp',
+        'prototype',
+        'length',
+        'parentNode',
+        '[data-test=\x22challenge-text-input\x22]',
+        'disabled',
+        'getElementsByClassName',
+        '[data-test=\x22challenge-choice-card\x22]',
+        'addEventListener',
+        'call',
+        '[data-test=\x22challenge-choice\x22]',
+        '5064XEdQMg',
+        '[data-test=\x22challenge-judge-text\x22]',
+        'mouseleave',
+        'displayTokens',
+        '157016YQlydk',
+        'children',
+        '144965TznrsP',
+        'props',
+        '114tDwDTb',
+        '__reactProps$',
+        'trim',
+        '4245038luvNBh',
+        'getElementsByTagName',
+        'learningToken',
+        'pairs',
+        'damageStart',
+        '[data-test=\x22challenge-tap-token-text\x22]',
+        '[data-test=\x22challenge-tap-token\x22]',
+        'articles',
+        'currentChallenge',
+        'correctSolutions',
+        'onclick',
+        'text',
+        'toLowerCase',
+        'click',
+        'className',
+        'appendChild',
+        'SOLVE\x20ALL',
+        'style',
+        'set',
+        'find',
+        '_3_pD1\x20_2ESN4\x20_2arQ0\x20_2vmUZ\x20_2Zh2S\x20_1X3l0\x20eJd0I\x20_3yrdh\x20_2wXoR\x20_1AM95\x20_1dlWz\x20_2gnHr\x20_2L5kw\x20_3Ry1f',
+        'dispatchEvent',
+        '10274304PYSgNA'
+    ];
+    _0x22c7 = function () {
+        return _0x2252d4;
+    };
+    return _0x22c7();
+}
+function FindReact(_0x125420, _0x51ef5b = 0x0) {
+    const _0x4db50d = _0x25b0;
+    const _0x2380d4 = Object[_0x4db50d(0x1a1)](_0x125420[_0x4db50d(0x1e6)])[_0x4db50d(0x1de)](_0x3bd461 => _0x3bd461[_0x4db50d(0x1a3)](_0x4db50d(0x1c9)));
+    return _0x125420[_0x4db50d(0x1e6)][_0x2380d4][_0x4db50d(0x1c5)][0x0][_0x4db50d(0x198)][_0x4db50d(0x1e7)];
+}
+window[_0xc515f2(0x195)] = FindReact;
+window['ss'] = startSolving;
